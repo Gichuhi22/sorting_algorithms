@@ -10,7 +10,7 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t i, min_idx, j, temp;
-	bool swapped = false;
+	bool flag = false;
 
 	if (!array)
 		return;
@@ -23,16 +23,16 @@ void selection_sort(int *array, size_t size)
 			if (array[i] < array[min_idx])
 			{
 				min_idx = i;
-				swapped = true;
+				flag = true;
 			}
 		}
-		if (swapped == true)
+		if (flag == true)
 		{
 			temp = array[min_idx];
 			array[min_idx] = array[j];
 			array[j] = temp;
-			swapped = false;
+			flag = false;
+			print_array(array, size);
 		}
-		print_array(array, size);
 	}
 }
