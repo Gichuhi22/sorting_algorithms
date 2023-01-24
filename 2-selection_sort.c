@@ -15,7 +15,7 @@ void selection_sort(int *array, size_t size)
 	if (!array)
 		return;
 
-	for (j = 0; j < size - 1; j++)
+	for (j = 0; j < size; j++)
 	{
 		min_idx = j;
 		for (i = j + 1; i < size; i++)
