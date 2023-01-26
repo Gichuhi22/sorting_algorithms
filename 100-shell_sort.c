@@ -10,6 +10,9 @@ void shell_sort(int *array, size_t size)
 	size_t interval = 1, inner, outer;
 	int valueToInsert;
 
+	if (!array || size < 2)
+		return;
+
 	while (interval < (size / 3))
 	{
 		interval = (interval * 3) + 1;
